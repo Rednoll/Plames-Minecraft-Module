@@ -24,7 +24,7 @@ public class CommandsWebAjax {
 	@GetMapping(value = "/commands")
 	public ResponseEntity<ArrayNode> getCommandsList() {
 		
-		Set<Command> commands = CommandRegistry.getAll();
+		Set<Command> commands = CommandRegistry.getDefaultRegistry().getAll();
 	
 		ArrayNode result = mapper.createArrayNode();
 	

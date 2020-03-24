@@ -34,6 +34,9 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	
+	compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.12'
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+	
 	compile project(':Plames-API')
     compile project(':Plames-Core')
 	compile project(':Plames-Market-API')
