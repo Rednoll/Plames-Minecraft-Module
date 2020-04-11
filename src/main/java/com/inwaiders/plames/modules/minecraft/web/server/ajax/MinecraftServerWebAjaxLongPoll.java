@@ -19,7 +19,7 @@ public class MinecraftServerWebAjaxLongPoll {
 	@GetMapping("/available/{id}")
 	public DeferredResult<ResponseEntity<Boolean>> available(@PathVariable long id) {
 		
-		DeferredResult<ResponseEntity<Boolean>> output = new DeferredResult<ResponseEntity<Boolean>>();
+		DeferredResult<ResponseEntity<Boolean>> output = new DeferredResult<ResponseEntity<Boolean>>(3600000L);
 		
 		MinecraftServer server = MinecraftServer.getById(id);
 		
